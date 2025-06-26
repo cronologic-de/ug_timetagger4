@@ -1,0 +1,5 @@
+sphinx
+furo
+bs4
+lxml
+atompy @ git+https://github.com/frekm/atompy.git@v4.20.0
