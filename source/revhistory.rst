@@ -51,10 +51,14 @@ Gen 2
 
 Driver & Applications
 =====================
+1.12.1 – 2025-07-17
+    - Added support for kernel mode driver 1.5.2
+    - Improved error handling
+
 1.10.7 – 2024-07-25
     - Support for TimeTagger4-10G (incl. calibration tool)
     - Include baseline calibration
-    - Reduced supported range of dc_offset by 100 mV.
+    - Reduced supported range of dc_offset by 100 mV
 
 1.9.0 – 2023-07-10
     - Added quantization to timetagger4_param_info structure
@@ -100,9 +104,12 @@ Driver & Applications
 User Guide
 ==========
 
-2.0.0 – TBD
-    - Release HTML User Guide
+2.0.0 – 2025-08-01
+    - Release of the HTML User Guide
     - Separated xHPTDC8, xTDC4, and TimeTagger4 User Guides
+
+1.10.7 – 2025-07-12
+    - xTDC4 and TimeTagger4: Documented driver release 1.12.1
 
 1.10.6 – 2025-06-10
     - xTDC4 and TimeTagger4: Updated Figure 3.2

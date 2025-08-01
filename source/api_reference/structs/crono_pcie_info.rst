@@ -31,13 +31,37 @@
         One of the following:
 
         .. c:macro:: CRONO_PCIE_RX_ERROR
+
+            Equals ``1 << 0``.
+
         .. c:macro:: CRONO_PCIE_BAD_TLP
+
+            Equals ``1 << 6``.
+
         .. c:macro:: CRONO_PCIE_BAD_DLLP
+
+            Equals ``1 << 7``.
+
         .. c:macro:: CRONO_PCIE_REPLAY_NUM_ROLLOVER
+
+            Equals ``1 << 8``.
+
         .. c:macro:: CRONO_PCIE_REPLAY_TIMER_TIMEOUT
+
+            Equals ``1 << 12``.
+
         .. c:macro:: CRONO_PCIE_ADVISORY_NON_FATAL
+
+            Equals ``1 << 13``.
+
         .. c:macro:: CRONO_PCIE_CORRECTED_INTERNAL_ERROR
+
+            Equals ``1 << 14``.
+
         .. c:macro:: CRONO_PCIE_HEADER_LOG_OVERFLOW
+
+            Equals ``1 << 15``.
+
 
     .. c:member:: uint32_t uncorrectable_error_status
 
@@ -50,15 +74,51 @@
         One of the following:
 
         .. c:macro:: CRONO_PCIE_UNC_UNDEFINED
+
+            Equals ``1 << 0``.
+
         .. c:macro:: CRONO_PCIE_UNC_DATA_LINK_PROTOCOL_ERROR
+
+            Equals ``1 << 4``.
+
         .. c:macro:: CRONO_PCIE_UNC_SURPRISE_DOWN_ERROR
+
+            Equals ``1 << 5``.
+
         .. c:macro:: CRONO_PCIE_UNC_POISONED_TLP
+
+            Equals ``1 << 12``.
+
         .. c:macro:: CRONO_PCIE_UNC_FLOW_CONTROL_PROTOCOL_ERROR
+
+            Equals ``1 << 13``.
+
         .. c:macro:: CRONO_PCIE_UNC_COMPLETION_TIMEOUT
+
+            Equals ``1 << 14``.
+
         .. c:macro:: CRONO_PCIE_UNC_COMPLETER_ABORT
+
+            Equals ``1 << 15``.
+
         .. c:macro:: CRONO_PCIE_UNC_UNEXPECTED_COMPLETION
+
+            Equals ``1 << 16``.
+
         .. c:macro:: CRONO_PCIE_UNC_RECEIVER_OVERFLOW_ERROR
+
+            Equals ``1 << 17``.
+
         .. c:macro:: CRONO_PCIE_UNC_MALFORMED_TLP
+
+            Equals ``1 << 18``.
+
         .. c:macro:: CRONO_PCIE_UNC_ECRC_ERROR
+
+            Equals ``1 << 19``.
+
         .. c:macro:: CRONO_PCIE_UNC_UNSUPPORED_REQUEST_ERROR
+
+            Equals ``1 << 20``.
+
 

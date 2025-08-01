@@ -1,6 +1,6 @@
 .. c:struct:: timetagger4_static_info
 
-   Structure contains static information
+   Structure that contains static information.
 
    This structure contains information about the board that does not change
    during run time. It is provided by the function
@@ -68,10 +68,7 @@
 
    .. c:member:: int chip_id
 
-      16 bit factory ID of the TDC chip.
-
-      This is the chipID as read from the 16 bit THS788 chip ID register
-      at SPI address ``0x83``. This value should be cached.
+      Reserved.
 
    .. c:member:: int board_serial
 
@@ -118,15 +115,16 @@
 
    .. c:member:: double auto_trigger_ref_clock
 
-      Auto trigger clock frequency.
+      Auto trigger clock frequency in Hz.
 
-      The clock frequency of the auto trigger in Hz
-      used for calculating
-      :c:member:`timetagger4_configuration.auto_trigger_period`.
+      Used for calculating the frequency of the auto trigger
+      (see :ref:`sec auto trigger` and
+      :c:member:`timetagger4_configuration.auto_trigger_period`).
 
    .. c:member:: uint32_t rollover_period
 
       The number of bins in a rollover period.
 
-      This is a power of 2. The maximum value of a hit's timestamp
-      is ``rollover_period - 1``.
+      If a rollover occurred, *T* bins have to be added to the timestamp of the hit
+      (see :c:member:`crono_packet.data` for more information, in particular,
+      :c:macro:`TIMETAGGER4_HIT_FLAG_TIME_OVERFLOW <crono_packet.data.TIMETAGGER4_HIT_FLAG_TIME_OVERFLOW>`)

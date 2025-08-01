@@ -13,6 +13,9 @@
 
         Bin size in ps of the measured TDC data.
 
+        | For Gen 1 boards, this is 500 ps.
+        | For Gen 2 boards, this is 100 ps.
+
     .. c:member:: int board_id
 
         ID of the TimeTagger4 device.
@@ -31,7 +34,7 @@
 
         Bit assignment of each enabled input channel.
 
-        Bit :math:`0 \le n < 4` is set if channel :math:`n` is enabled.
+        Bit 0 ≤ *n* ≤ 3 is set if channel *n* is enabled.
 
     .. c:member:: int64_t total_buffer
 

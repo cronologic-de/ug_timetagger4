@@ -22,7 +22,12 @@ timetagger4_start_capture
     Start data acquisition.
 
     :param device: Pointer to a TimeTagger4 device.
-    :return: Status code: TODO
+    :returns: Status code:
+        :c:macro:`TIMETAGGER4_OK`,
+        :c:macro:`TIMETAGGER4_INVALID_DEVICE`,
+        :c:macro:`TIMETAGGER4_CRONO_INTERNAL_ERROR`,
+        :c:macro:`TIMETAGGER4_HARDWARE_FAILURE`, or
+        :c:macro:`TIMETAGGER4_WRONG_STATE`.
 
 
 timetagger4_pause_capture
@@ -38,7 +43,10 @@ timetagger4_pause_capture
     configuration change.
 
     :param device: Pointer to a TimeTagger4 device.
-    :return: Status code: TODO
+    :returns: Status code:
+        :c:macro:`TIMETAGGER4_OK`,
+        :c:macro:`TIMETAGGER4_INVALID_DEVICE`,
+        :c:macro:`TIMETAGGER4_WRONG_STATE`.
 
 
 timetagger4_continue_capture
@@ -54,7 +62,10 @@ timetagger4_continue_capture
     configuration change.
 
     :param device: Pointer to a TimeTagger4 device.
-    :return: Status code: TODO
+    :return: Status code:
+        :c:macro:`TIMETAGGER4_OK`,
+        :c:macro:`TIMETAGGER4_INVALID_DEVICE`,
+        :c:macro:`TIMETAGGER4_WRONG_STATE`.
 
 
 timetagger4_stop_capture
@@ -65,7 +76,9 @@ timetagger4_stop_capture
     Stop data acquisition.
 
     :param device: Pointer to a TimeTagger4 device.
-    :return: Status code: TODO
+    :returns: Status code:
+        :c:macro:`TIMETAGGER4_OK`, or
+        :c:macro:`TIMETAGGER4_INVALID_DEVICE`.
 
 
 timetagger4_start_tiger
@@ -78,7 +91,10 @@ timetagger4_start_tiger
     This can be done independently of the state of the data acquisition.
 
     :param device: Pointer to a TimeTagger4 device.
-    :return: Status code: TODO
+    :return: Status code:
+        :c:macro:`TIMETAGGER4_OK`,
+        :c:macro:`TIMETAGGER4_INVALID_DEVICE`, or
+        :c:macro:`TIMETAGGER4_WRONG_STATE`.
 
 
 timetagger4_stop_tiger
@@ -91,4 +107,6 @@ timetagger4_stop_tiger
     This can be done independently of the state of the data acquisition.
 
     :param device: Pointer to a TimeTagger4 device.
-    :return: Status code: TODO
+    :return: Status code:
+        :c:macro:`TIMETAGGER4_OK` or
+        :c:macro:`TIMETAGGER4_INVALID_DEVICE`.

@@ -2,7 +2,7 @@
 .. c:struct:: timetagger4_tiger_block
 
     This struct configures the Timing Generators
-    (see also :ref:`sec tiger`).
+    [see also :ref:`sec tiger`].
 
     .. c:member:: crono_bool_t enable
 
@@ -79,18 +79,43 @@
 
         Default is :c:macro:`TIMETAGGER4_TRIGGER_SOURCE_S`.
 
-        Possible trigger sources are
+        Possible trigger sources are:
 
         .. c:macro:: TIMETAGGER4_TRIGGER_SOURCE_S
+
+            ``0x00000001``. If this bit is set, the Start channel can trigger the TiGer
+            block.
+
         .. c:macro:: TIMETAGGER4_TRIGGER_SOURCE_A
+
+            ``0x00000002``. If this bit is set, Stop channel A can trigger the TiGer
+            block.
+
         .. c:macro:: TIMETAGGER4_TRIGGER_SOURCE_B
+
+            ``0x00000004``. If this bit is set, Stop channel B can trigger the TiGer
+            block.
+
         .. c:macro:: TIMETAGGER4_TRIGGER_SOURCE_C
+
+            ``0x00000008``. If this bit is set, Stop channel C can trigger the TiGer
+            block.
+
         .. c:macro:: TIMETAGGER4_TRIGGER_SOURCE_D
-        .. c:macro:: TIMETAGGER4_TRIGGER_SOURCE_S1
-        .. c:macro:: TIMETAGGER4_TRIGGER_SOURCE_S2
-        .. c:macro:: TIMETAGGER4_TRIGGER_SOURCE_GATE
+
+            ``0x00000010``. If this bit is set, Stop channel D can trigger the TiGer
+            block.
+
         .. c:macro:: TIMETAGGER4_TRIGGER_SOURCE_AUTO
+
+            ``0x00004000``. If this bit is set, the
+            :ref:`auto trigger function generator <sec auto trigger>` can trigger
+            the TiGer block.
+
         .. c:macro:: TIMETAGGER4_TRIGGER_SOURCE_ONE
+
+            ``0x00008000``. If this bit is set, the TiGer block is triggered every
+            clock cycle.
 
         For example, if you want the Start channel and the auto trigger to trigger
         the TiGer block:

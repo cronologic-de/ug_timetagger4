@@ -26,14 +26,17 @@
 
         .. c:macro:: TIMETAGGER4_TDC_MODE_CONTINUOUS
 
-            Operate in continuous mode.
+            Operate in continuous mode. Only available for Gen 2.
 
             See also :ref:`sec continuous mode`.
 
             :c:member:`auto_trigger_period` must be set appropriately.
 
-            :c:member:`channel[i].stop <channel>` must be larger than
-            :c:member:`auto_trigger_period`. TODO improve documentation
+            The time corresponding to :c:member:`channel[i].stop <channel>` must be
+            larger than the time corresponding to :c:member:`auto_trigger_period`,
+            otherwise not all hits on ``channels[i]`` will be recorded. You can achieve
+            this easily by setting :c:member:`stop <timetagger4_channel.stop>` to the
+            maximum possible value (``0xffffffff``).
 
     .. c:member:: crono_bool_t start_rising
 
@@ -76,25 +79,85 @@
         Values for various signaling standards are provided as macros:
 
         .. c:macro:: TIMETAGGER4_DC_OFFSET_P_NIM
+
+            DC offset is set to 0.35 V.
+
         .. c:macro:: TIMETAGGER4_DC_OFFSET_P_CMOS
+
+            DC offset is set to 1.13 V.
+
         .. c:macro:: TIMETAGGER4_DC_OFFSET_P_LVCMOS_33
+
+            DC offset is set to 1.13 V.
+
         .. c:macro:: TIMETAGGER4_DC_OFFSET_P_LVCMOS_25
+
+            DC offset is set to 1.13 V.
+
         .. c:macro:: TIMETAGGER4_DC_OFFSET_P_LVCMOS_18
+
+            DC offset is set to 0.90 V.
+
         .. c:macro:: TIMETAGGER4_DC_OFFSET_P_TTL
+
+            DC offset is set to 1.13 V.
+
         .. c:macro:: TIMETAGGER4_DC_OFFSET_P_LVTTL_33
+
+            DC offset is set to 1.13 V.
+
         .. c:macro:: TIMETAGGER4_DC_OFFSET_P_LVTTL_25
+
+            DC offset is set to 1.13.
+
         .. c:macro:: TIMETAGGER4_DC_OFFSET_P_SSTL_3
+
+            DC offset is set to 1.13 V.
+
         .. c:macro:: TIMETAGGER4_DC_OFFSET_P_SSTL_2
+
+            DC offset is set to 1.13 V.
+
         .. c:macro:: TIMETAGGER4_DC_OFFSET_N_NIM
+
+            DC offset is set to –0.35 V.
+
         .. c:macro:: TIMETAGGER4_DC_OFFSET_N_CMOS
+
+            DC offset is set to –1.27 V.
+
         .. c:macro:: TIMETAGGER4_DC_OFFSET_N_LVCMOS_33
+
+            DC offset is set to –1.27 V.
+
         .. c:macro:: TIMETAGGER4_DC_OFFSET_N_LVCMOS_25
+
+            DC offset is set to –1.25 V.
+
         .. c:macro:: TIMETAGGER4_DC_OFFSET_N_LVCMOS_18
+
+            DC offset is set to –0.90 V.
+
         .. c:macro:: TIMETAGGER4_DC_OFFSET_N_TTL
+
+            DC offset is set to –1.27 V.
+
         .. c:macro:: TIMETAGGER4_DC_OFFSET_N_LVTTL_33
+
+            DC offset is set to –1.27 V.
+
         .. c:macro:: TIMETAGGER4_DC_OFFSET_N_LVTTL_25
+
+            DC offset is set to –1.25 V.
+
         .. c:macro:: TIMETAGGER4_DC_OFFSET_N_SSTL_3
+
+            DC offset is set to –1.27 V.
+
         .. c:macro:: TIMETAGGER4_DC_OFFSET_N_SSTL_2
+
+            DC offset is set to –1.25 V.
+
 
     .. c:member:: timetagger4_trigger trigger[TIMETAGGER4_TRIGGER_COUNT]
 
@@ -136,7 +199,7 @@
 
     .. c:member:: uint32_t auto_trigger_random_exponent
 
-        Configure the randomness of the 
+        Configure the randomness of the
         :ref:`auto trigger function generator <sec auto trigger>`.
 
         There is no enable or reset of the auto trigger.
@@ -153,16 +216,19 @@
 
         :c:macro:`TIMETAGGER4_TDC_MODE_GROUPED <tdc_mode.TIMETAGGER4_TDC_MODE_GROUPED>`
             *M*\ :sub:`min` :math:`\le` *M* < 2\ :sup:`32` and 0 :math:`\le` *N* < 32
-            
+
             *M*\ :sub:`min` is 6 for Gen 1 and 8 for Gen 2.
 
         :c:macro:`TIMETAGGER4_TDC_MODE_CONTINUOUS <tdc_mode.TIMETAGGER4_TDC_MODE_CONTINUOUS>`
             31 :math:`\le` *M* < 78125000 and 0 :math:`\le` *N* < 32
 
+        *M* and *N* are given in units of
+        :c:member:`timetagger4_static_info.auto_trigger_ref_clock`.
+
         .. note::
 
             The auto trigger can be used as a source of the TiGer blocks
-            (:c:member:`timetagger4_tiger_block.source`).
+            (:c:member:`timetagger4_tiger_block.sources`).
 
 
     .. c:member:: timetagger4_delay_config delay_config[TIMETAGGER4_TDC_CHANNEL_COUNT + 1]

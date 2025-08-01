@@ -13,7 +13,7 @@ that are read in batches with :c:func:`timetagger4_read`.
 
 :c:func:`timetagger4_read` requires :c:struct:`timetagger4_read_in` as configuration.
 
-:c:func:`timetagger4_read` stores the read batch in a :c:struct:`timetagger4_read_out`.
+:c:func:`timetagger4_read` stores the read batch in a :c:struct:`timetagger4_read_out`
 struct.
 
 Every packet needs to be *acknowledged* before its memory location can be used again
@@ -110,6 +110,11 @@ timetagger4_read
         read call.
     :param out: Pointer to a :c:struct:`timetagger4_read_out` that will be filled
         by the call.
+    :return: Status code:
+        Same as :c:member:`out.error_code <timetagger4_read_out.error_code>`, or
+        :c:macro:`TIMETAGGER4_INVALID_DEVICE`.
+
+
 
 
 timetagger4_acknowledge
@@ -143,7 +148,10 @@ timetagger4_acknowledge
 
     :param device: Pointer to a TimeTagger4 device.
     :param packet: Pointer to a packet. All packets up to this one will be acknowledged.
-    :return: Status code: TODO
+    :return: Status code:
+        :c:macro:`TIMETAGGER4_OK`, or
+        :c:macro:`TIMETAGGER4_INVALID_DEVICE`.
+
 
 
 crono_next_packet
@@ -202,20 +210,20 @@ timetagger4_read_out
 
         .. c:macro:: CRONO_READ_OK
 
-            Read was successful. No errors occurred.
+            ``0``. Read was successful. No errors occurred.
 
         .. c:macro:: CRONO_READ_NO_DATA
 
-            The read attempt did not yield any data.
+            ``1``. The read attempt did not yield any data.
 
         .. c:macro:: CRONO_READ_INTERNAL_ERROR
 
-            Some unhandled error occurred. The TimeTagger4 device needs to be
+            ``2``. Some unhandled error occurred. The TimeTagger4 device needs to be
             reinitialized.
         
         .. c:macro:: CRONO_READ_TIMEOUT
 
-            Attempt to read packets did not yield data in the given time.
+            ``3``. Attempt to read packets did not yield data in the given time.
 
     .. c:member:: const char* error_message
 

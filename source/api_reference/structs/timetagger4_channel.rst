@@ -15,19 +15,20 @@
 
         Start value for the grouping functionality.
 
-        See also :c:member:`stop` and :ref:`sec grouping`.
-
         In multiples of :c:member:`timetagger4_param_info.binsize`.
+
+        See also :c:member:`stop` and :ref:`sec grouping`.
 
     .. c:member:: uint32_t stop
 
         Stop value for the grouping functionality.
 
-        See also :ref:`sec grouping`.
-
         In multiples of :c:member:`timetagger4_param_info.binsize`.
 
         Only hits between :c:member:`start` and :c:member:`stop` are read out.
 
-        The range is 0 :math:`\le` :c:member:`start` :math:`\le` :c:member:`stop`
-        :math:`\le` 2\ :sup:`31`.
+        For Gen 1, the range is 0 ≤ :c:member:`start` ≤ :c:member:`stop` ≤ 2\ :sup:`31`.
+
+        For Gen 2, the range is 0 ≤ :c:member:`start` ≤ :c:member:`stop` ≤ 2\ :sup:`32`.
+
+        See also :ref:`sec grouping`.

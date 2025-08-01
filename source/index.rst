@@ -42,14 +42,14 @@ are grouped into one packet, while all pulses outside that range are discarded.
 
 - **4-channel common-start TDC**
 - **Quantization** (measurement resolution): **100 to 1000 ps**
-- **Standard range**: 8.388 ms for Gen 1 and **1.677 ms** for **Gen 2** (24 bits)
-- **Extended range**: 2.147 s for Gen 1 and **0.428 s** for **Gen 2** (31 bits)
+- **Standard range**: 8.388 ms for Gen 1 and **1.677 ms** for Gen 2 (24 bits)
+- **Extended range**: 1.073 s for Gen 1 and **0.429 s** for Gen 2 (31 bits)
 - **Double-pulse resolution**: twice the quantization size
 - **Dead time** between groups: **none**
 - **Minimum interval** between starts: 4 ns for Gen 1 and **3.2 ns** for **Gen 2**
 - Up to **8000 Hits per packet**
-- **5 to 0.625 GHz/s** for bursts of up to 4096 starts
-- **5 to 0.625 GHits/s/channel** for bursts of up to 3900 stops
+- **5 to 0.625 GHz/s** for bursts of up to 4096 starts (depending on variant)
+- **5 to 0.625 GHits/s/channel** for bursts of up to 3900 stops (depending on variant)
 - **40 MHits/s/channel** of sustained stops
 - **60 MHits/s** over all channels of sustained stops
 - **PCIe x1** interface

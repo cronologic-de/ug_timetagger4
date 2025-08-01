@@ -56,7 +56,9 @@ timetagger4_get_default_init_parameters
     :param init: Pointer to a :c:struct:`timetagger4_init_parameters` struct that
         will be filled.
 
-    :returns: Status codes. TODO
+    :returns: Status codes:
+        :c:macro:`TIMETAGGER4_OK` or
+        :c:macro:`TIMETAGGER4_CRONO_INVALID_ARGUMENTS`.
 
 timetagger4_init
 ================
@@ -67,20 +69,28 @@ timetagger4_init
     char **error_message)
 
     Opens and initializes the TimeTagger4 board with index
-    :c:member:`params->card_index <timetagger4_init_parameters.card_index>`.
+    :c:member:`params.card_index <timetagger4_init_parameters.card_index>`.
 
     :param params: Pointer to a :c:struct:`timetagger4_init_parameters`.
         The struct must have been completely initialized using
         :c:func:`timetagger4_get_default_init_parameters`.
 
     :param error_code: Pointer to the location where a potential error code will be
-        stored. Equals :c:macro:`TIMETAGGER4_OK` if no error occurred.
+        stored.
+        Equals :c:macro:`TIMETAGGER4_OK` if no error occurred. Otherwise can be
+        :c:macro:`TIMETAGGER4_CRONO_INVALID_ARGUMENTS`,
+        :c:macro:`TIMETAGGER4_DEVICE_OPEN_FAILED`,
+        :c:macro:`TIMETAGGER4_HARDWARE_FAILURE`,
+        :c:macro:`TIMETAGGER4_INVALID_BUFFER_PARAMETERS`,
+        :c:macro:`TIMETAGGER4_CRONO_INTERNAL_ERROR`, or
+        :c:macro:`TIMETAGGER4_WRONG_STATE`.
+
 
     :param error_message: Pointer to a location where a potential error message in plain
         text will be stored.
 
     :return: The TimeTagger4 device corresponding to
-        :c:member:`params->card_index <timetagger4_init_parameters.card_index>`.
+        :c:member:`params.card_index <timetagger4_init_parameters.card_index>`.
 
 
 timetagger4_close
@@ -92,7 +102,11 @@ timetagger4_close
 
     :param device: Pointer to the device that shall be closed.
 
-    :returns: Status code. TODO
+    :returns: Status code:
+        :c:macro:`TIMETAGGER4_OK`,
+        :c:macro:`TIMETAGGER4_INVALID_DEVICE`,
+        :c:macro:`TIMETAGGER4_WRONG_STATE`, or
+        :c:macro:`TIMETAGGER4_CRONO_INTERNAL_ERROR`.
 
 
 timetagger4_init_parameters

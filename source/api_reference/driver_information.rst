@@ -40,7 +40,8 @@ timetagger4_count_devices
     installed TimeTagger4 driver.
 
     :param error_code: Pointer to the location where a potential error code will be
-        stored. Equals :c:macro:`TIMETAGGER4_OK` if no error occurred.
+        stored.
+        Equals :c:macro:`TIMETAGGER4_OK` if no error occurred.
     :param error_message: Pointer to a location where a potential error message in plain
         text will be stored.
     :return: The number of boards.

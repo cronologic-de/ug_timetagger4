@@ -25,8 +25,7 @@ timetagger4_get_last_error_message
     Get the last error message.
 
     :param device: Pointer to a TimeTagger4 device.
-    :return: The error message. Returns an empty string if no errors have occurred
-        TODO - Double check.
+    :return: The error message.
 
 timetagger4_get_fast_info
 =========================
@@ -44,7 +43,7 @@ timetagger4_get_fast_info
     :return: Status codes:
         :c:macro:`TIMETAGGER4_OK`,
         :c:macro:`TIMETAGGER4_INVALID_DEVICE`,
-        :c:macro:`CRONO_INVALID_ARGUMENTS`, or
+        :c:macro:`TIMETAGGER4_CRONO_INVALID_ARGUMENTS`, or
         ``-1``.
 
 timetagger4_get_param_info
@@ -61,7 +60,10 @@ timetagger4_get_param_info
     :param device: Pointer to a TimeTagger4 device.
     :param info: Pointer to a :c:struct:`timetagger4_param_info` struct that
         will be filled.
-    :return: Status codes - TODO
+    :return: Status codes:
+        :c:macro:`TIMETAGGER4_OK`,
+        :c:macro:`TIMETAGGER4_CRONO_INVALID_ARGUMENTS`, or
+        :c:macro:`TIMETAGGER4_WRONG_STATE`,
 
 
 timetagger4_get_static_info
@@ -79,7 +81,7 @@ timetagger4_get_static_info
     :return: Status codes:
         :c:macro:`TIMETAGGER4_OK`,
         :c:macro:`TIMETAGGER4_INVALID_DEVICE`, or
-        :c:macro:`CRONO_INVALID_ARGUMENTS`.
+        :c:macro:`TIMETAGGER4_CRONO_INVALID_ARGUMENTS`.
 
 
 timetagger4_get_pcie_info
@@ -94,7 +96,10 @@ timetagger4_get_pcie_info
     :param device: Pointer to a TimeTagger4 device.
     :param pcie_info: Pointer to a :c:struct:`crono_pcie_info` struct that
         will be filled.
-    :return: Status codes: TODO
+    :return: Status codes:
+        :c:macro:`TIMETAGGER4_OK`,
+        :c:macro:`TIMETAGGER4_INVALID_DEVICE`, or
+        :c:macro:`TIMETAGGER4_HARDWARE_FAILURE`.
 
 timetagger4_clear_pcie_errors
 =============================
@@ -119,7 +124,9 @@ timetagger4_clear_pcie_errors
 
     :param device: Pointer to a TimeTagger4 device.
     :param flag: Flag which errors to clear.
-    :return: Status codes: TODO
+    :return: Status codes:
+        :c:macro:`TIMETAGGER4_OK`, or
+        :c:macro:`TIMETAGGER4_INVALID_DEVICE`.
 
 timetagger4_fast_info
 =====================

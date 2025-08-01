@@ -11,7 +11,7 @@ Configuration
 After a TimeTagger4 device has been initialized (see :ref:`sec initialization`), it
 must be configured before it can acquire data.
 
-To configure a TimeTagger device:
+To configure a TimeTagger4 device:
 
 - Get a default set of configuration parameters using
   :c:func:`timetagger4_get_default_configuration`.
@@ -49,7 +49,10 @@ timetagger4_configure
     :param device: Pointer to a TimeTagger4 device.
     :param config: Pointer to a :c:struct:`timetagger4_configuration` struct used
         for the configuration.
-    :return: Status code: TODO
+    :return: Status code: :c:macro:`TIMETAGGER4_OK`,
+        :c:macro:`TIMETAGGER4_INVALID_DEVICE`,
+        :c:macro:`TIMETAGGER4_HARDWARE_FAILURE`, or
+        :c:macro:`TIMETAGGER4_INVALID_CONFIG_PARAMETERS`.
 
 
 timetagger4_get_default_configuration
@@ -64,7 +67,9 @@ timetagger4_get_default_configuration
     :param device: Pointer to a TimeTagger4 device.
     :param config: Pointer to a :c:struct:`timetagger4_configuration` struct that
         will be filled.
-    :return: Status code: TODO
+    :return: Status code: :c:macro:`TIMETAGGER4_OK`,
+        :c:macro:`TIMETAGGER4_INVALID_DEVICE`, or
+        :c:macro:`TIMETAGGER4_CRONO_INVALID_ARGUMENTS`.
 
 
 timetagger4_get_current_configuration
@@ -80,7 +85,8 @@ timetagger4_get_current_configuration
     :param device: Pointer to a configured TimeTagger4 device.
     :param config: Pointer to a :c:struct:`timetagger4_configuration` struct that
         will be filled.
-    :return: Status code: TODO
+    :return: Status code: :c:macro:`TIMETAGGER4_OK`, or
+        :c:macro:`TIMETAGGER4_INVALID_DEVICE`.
 
 timetagger4_configuration
 =========================

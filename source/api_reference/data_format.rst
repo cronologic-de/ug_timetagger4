@@ -90,6 +90,8 @@ crono_packet
         Each bit corresponds to one of the following:
 
         .. c:macro:: TIMETAGGER4_PACKET_FLAG_ODD_HITS
+
+            ``0x1``.
             
             If this bit is set, the last word in the :c:member:`data` array
             consists of one timestamp only, which means that only  the lower 32
@@ -97,11 +99,15 @@ crono_packet
         
         .. c:macro:: TIMETAGGER4_PACKET_FLAG_SLOW_SYNC
 
+            ``0x2``.
+
             If this bit is set, the timestamp of a hit is above the range of the
             8-bit rollover number and the 24-bit hit timestamp. The group is closed
             and all other hits are ignored.
 
         .. c:macro:: TIMETAGGER4_PACKET_FLAG_START_MISSED
+
+            ``0x4``.
 
             If this bit is set, packets were discarded due to a full FIFO
             potentially caused by a data hit rate that is too high.
@@ -110,6 +116,8 @@ crono_packet
 
         .. c:macro:: TIMETAGGER4_PACKET_FLAG_SHORTENED
 
+            ``0x8``.
+
             If this bit is set, packets were shortened due to a full pipeline of the
             FIFO potentially caused by a data hit rate that is too high.
 
@@ -117,10 +125,14 @@ crono_packet
 
         .. c:macro:: TIMETAGGER4_PACKET_FLAG_DMA_FIFO_FULL
 
+            ``0x10``.
+
             If this bit is set, the internal FIFO was full, potentially caused by a
             hit rate that is too high.
 
         .. c:macro:: TIMETAGGER4_PACKET_FLAG_HOST_BUFFER_FULL
+
+            ``0x20``.
 
             If this bit is set, the host buffer was full. This might result in
             dropped packets.
@@ -184,9 +196,13 @@ crono_packet
 
         .. c:macro:: TIMETAGGER4_HIT_FLAG_COARSE_TIMESTAMP
 
+            ``0x4``.
+
             This bit is always set for the TimeTagger4.
 
         .. c:macro:: TIMETAGGER4_HIT_FLAG_TIME_OVERFLOW
+
+            ``0x2``.
 
             If this bit is set, the data word indicates a rollover and
             does *not* encode a TDC hit.
@@ -196,7 +212,7 @@ crono_packet
 
             To correctly determine the timestamp of the following TDC hits, the
             application needs to increment a rollover counter if the
-            ``TIMETAGGER_HIT_FLAG_TIME_OVERFLOW`` bit is set:
+            ``TIMETAGGER4_HIT_FLAG_TIME_OVERFLOW`` bit is set:
 
             .. code-block:: C
 
@@ -216,6 +232,8 @@ crono_packet
                 :c:struct:`crono_packet`.
 
         .. c:macro:: TIMETAGGER4_HIT_FLAG_RISING
+
+            ``0x1``.
 
             If this bit is set, this hit corresponds to a signal's rising edge,
             otherwise to a falling edge.
