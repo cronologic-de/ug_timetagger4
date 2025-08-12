@@ -270,8 +270,8 @@ calibration tool.
 In case the calibration fails, please check the following:
 
 - The TimeTagger4-10G is installed properly (see :ref:`sec installation`).
-- A proper NIM signal with a constant frequency larger than 20 kHz and small 10 MHz
-  is used.
+- A proper NIM signal with a constant frequency larger than 20 kHz and smaller than
+  10 MHz is used.
 - The NIM signal used conforms to the signal requirements laid out in
   :ref:`sec tdc inputs`.
 - The NIM signal was connected to the appropriate input channel
