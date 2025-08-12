@@ -155,6 +155,8 @@ Power Supply
     | I\ :sub:`aux`   | PCIe 3.3 V\ :sub:`Aux` rail input current          |      | 0       |      | mA    |
     +-----------------+----------------------------------------------------+------+---------+------+-------+
 
+.. _sec tdc inputs:
+
 TDC Inputs
 ----------
 

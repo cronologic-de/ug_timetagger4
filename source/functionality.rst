@@ -251,7 +251,8 @@ tool The tool is located in the driver installation directory in ``apps\x64``
 ).
 
 To perform a calibration, you need a NIM signal with a constant frequency larger than
-20 kHz and smaller than 15 MHz.
+20 kHz and smaller than 15 MHz. The stability of the frequency is crucial. A period
+stability of 6 ps has been verified to work.
 
 Run ``timetagger4_10g_calibration_64.exe`` and follow the instructions on-screen,
 that is:
@@ -271,5 +272,7 @@ In case the calibration fails, please check the following:
 - The TimeTagger4-10G is installed properly (see :ref:`sec installation`).
 - A proper NIM signal with a constant frequency larger than 20 kHz and small 10 MHz
   is used.
+- The NIM signal used conforms to the signal requirements laid out in
+  :ref:`sec tdc inputs`.
 - The NIM signal was connected to the appropriate input channel
   (see :numref:`fig bracket`).
