@@ -104,6 +104,9 @@ Driver & Applications
 User Guide
 ==========
 
+2.0.1-dev – TBD
+    - Various clarifications in API
+
 2.0.0 – 2025-08-01
     - Release of the HTML User Guide
     - Separated xHPTDC8, xTDC4, and TimeTagger4 User Guides
