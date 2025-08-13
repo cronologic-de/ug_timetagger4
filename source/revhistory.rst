@@ -105,7 +105,7 @@ User Guide
 ==========
 
 2.0.1-dev – TBD
-    - Various clarifications in API
+    - Various clarifications and corrections in API
     - Updated :ref:`sec calibration`
 
 2.0.0 – 2025-08-01
