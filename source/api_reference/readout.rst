@@ -122,7 +122,7 @@ timetagger4_acknowledge
 
 .. c:function:: int timetagger4_acknowledge(\
     timetagger4_device *device,\
-    crono_packet *packet)
+    volatile crono_packet *packet)
 
     Acknowledge all packets up to ``packet``.
 
