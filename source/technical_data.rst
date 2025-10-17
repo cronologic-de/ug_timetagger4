@@ -6,6 +6,15 @@ Each board is tested against the values listed in the columns “Min” and “M
 “Typical” (Typ.) is the mean value of the first 10 boards produced or a value that is
 set by design.
 
+Dimension
+=========
+
+The TimeTagger4 boards fit any standard full-height PCIe slot and occupy a single
+slot width.
+
+The overall dimensions, *including the slot bracket*, are **181.0 × 126.3 × 21.6 mm** 
+(depths × height × width).
+
 TDC Characteristics
 ===================
 
