@@ -12,10 +12,10 @@ TimeTagger4 User Guide
     \addcontentsline{toc}{chapter}{Introduction}
     \chapter*{Introduction}
 
-
-The TimeTagger4 is a *common-start* low resolution, high throughput time-to-digital
-converter. Timestamps of leading or trailing edges (or both) of digital pulses are
-recorded.
+With the original TimeTaggers, cronologic has coined a name for an entire generic brand
+of time-to-digital converters. Our TimeTagger4 boards are *common-start*, low-resolution,
+high-throughput TDCs that offer the ability to record timestamps of leading
+or trailing edges (or both) of digital pulses.
 
 The TimeTagger4 produces a stream of output *packets*, each containing data from
 a single start event.
