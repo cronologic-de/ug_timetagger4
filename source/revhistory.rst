@@ -108,6 +108,7 @@ User Guide
     - Various clarifications and corrections in API
     - Updated :ref:`sec calibration`
     - Updated introductory text
+    - Updated :numref:`fig board overview`
     - Added board dimensions
 
 2.0.0 – 2025-08-01
