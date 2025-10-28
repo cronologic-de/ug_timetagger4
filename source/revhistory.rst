@@ -110,6 +110,7 @@ User Guide
     - Updated introductory text
     - Updated :numref:`fig board overview`
     - Added board dimensions
+    - Clarifications in Technical Data
 
 2.0.0 – 2025-08-01
     - Release of the HTML User Guide
