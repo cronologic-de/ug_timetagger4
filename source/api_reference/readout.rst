@@ -67,7 +67,7 @@ or in Section :ref:`sec code example`.
 Memory Management
 =================
 
-The TimeTagger4 internal FIFOs (first-in, first-out) that buffer data during
+The TimeTagger4 has internal FIFOs (first-in, first-out) that buffer data during
 acquisition.
 
 The data is streamed from the FIFO to the
