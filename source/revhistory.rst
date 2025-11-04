@@ -111,7 +111,8 @@ User Guide
     - Updated :numref:`fig board overview`
     - Added board dimensions
     - Clarifications in :doc:`technical_data`
-    - Added 10 MHz external clock SMA connector :numref:`fig schematic`
+    - Added 10 MHz external clock SMA connector to :numref:`fig schematic`
+
 
 2.0.0 – 2025-08-01
     - Release of the HTML User Guide
