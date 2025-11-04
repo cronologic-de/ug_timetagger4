@@ -104,13 +104,14 @@ Driver & Applications
 User Guide
 ==========
 
-2.0.1-dev – TBD
+2.0.1 – 2025-11-04
     - Various clarifications and corrections in API
     - Updated :ref:`sec calibration`
     - Updated introductory text
     - Updated :numref:`fig board overview`
     - Added board dimensions
-    - Clarifications in Technical Data
+    - Clarifications in :doc:`technical_data`
+    - Added 10 MHz external clock SMA connector :numref:`fig schematic`
 
 2.0.0 – 2025-08-01
     - Release of the HTML User Guide
