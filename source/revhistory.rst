@@ -104,8 +104,9 @@ Driver & Applications
 User Guide
 ==========
 
-2.0.2 – TBD
+2.0.2 – 2026-01-07
     - Updated :numref:`fig schematic`
+    - Fixes in :ref:`sec tdc specs`
 
 
 2.0.1 – 2025-11-04
