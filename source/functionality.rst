@@ -96,8 +96,7 @@ The period is
 
     T = M + [1 \dots 2^N] - 1
 
-clock cycles with a duration of 4 ns per cycle for Gen 1 and 3.2 ns for Gen 2
-TimeTagger4.
+clock cycles with a duration of 4 ns per cycle for Gen 1 and 3.2 ns for Gen 2.
 
 The standard values of *M* = 62500 and *N* = 0 result in a frequency of 4 kHz
 for TimeTagger4 Gen 1 and 5 kHz for Gen 2.
