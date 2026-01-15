@@ -173,7 +173,7 @@ exact time differences between the generated output signals and input signals
 on other channels.
 
 When using one of the input channels as a source for the TiGer, the expected latency between
-signal input and TiGer output is roughly 9 5ns.
+signal input and TiGer output is roughly 95 ns.
 
 
 .. figure:: _figures/xTDC4_tiger_matrix.*
