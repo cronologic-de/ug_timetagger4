@@ -105,6 +105,7 @@ User Guide
 ==========
 
 2.0.3-dev – TBD
+    - Added :numref:`fig cable delay`
     - Fixed typos
 
 2.0.2 – 2026-01-07

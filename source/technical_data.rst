@@ -136,6 +136,19 @@ Oscillator Time Base
     | ΔF/F\ :sub:`10`| Aging 10 years                           |     |         | 8   | ppm   |
     +----------------+------------------------------------------+-----+---------+-----+-------+
 
+Cable Delay Test
+----------------
+
+:numref:`fig cable delay` shows example histograms resulting from a cable
+delay test, in which a constant delay is measured multiple times.
+From these histograms it is apparent that the practically the only contribution to the
+timing error the quantization error.
+
+.. figure:: _figures/cable_delay_tests.*
+    :name: fig cable delay
+    :alt: Histograms of cable delay tests.
+
+    Histograms of a cable delay test for all TimeTagger4 variants.
 
 Electrical Characteristics
 ==========================
