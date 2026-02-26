@@ -64,7 +64,7 @@ def main():
     plt.rcParams["axes.spines.bottom"] = True
     plt.rcParams["axes.spines.top"] = True
     plt.rcParams["axes.spines.right"] = True
-    plt.rcParams["font.size"] = 7.0
+    plt.rcParams["font.size"] = 6.0
 
     fig, axs = plt.subplots(4, 4, layout=layout_engine)
 
@@ -84,7 +84,7 @@ def main():
             ax.set_title(cname)
 
             ax.plot(*data[v, c], drawstyle="steps-mid", lw=1.5)
-            mplu.set_axes_size(0.75, aspect=3.0, ax=axs[v, c])
+            mplu.set_axes_size(0.65, aspect=3.0, ax=axs[v, c])
             ax.set_xlim(XLIMS)
             ax.set_ylim(-3, ymax * 1.05)
 
