@@ -4,7 +4,7 @@ import mplutils as mplu
 from matplotlib.ticker import MultipleLocator
 
 FNAME = "cable_delay_tests"
-VARIANT_NAMES = [f"TimeTagger-{v}G" for v in ("10", "5", "2.5", "1.25")]
+VARIANT_NAMES = [f"TimeTagger4-{v}G" for v in ("10", "5", "2.5", "1.25")]
 CHANNEL_NAMES = [f"Channel {c}" for c in "ABCD"]
 XLIMS = -18, 18
 XTICKS = -16, -8, 0, 8, 16
@@ -101,6 +101,7 @@ def main():
         ax.xaxis.set_label_coords(0, -0.055)
 
     fig.savefig(f"{FNAME}.pdf")
+    fig.savefig(f"{FNAME}.svg")
 
 
 if __name__ == "__main__":
