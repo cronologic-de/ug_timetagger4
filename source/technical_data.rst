@@ -142,13 +142,18 @@ Cable Delay Test
 :numref:`fig cable delay` shows example histograms resulting from a cable
 delay test, in which a constant delay is measured multiple times.
 From these histograms it is apparent that the practically the only contribution to the
-timing error the quantization error.
+timing error the quantization error (see our
+`application note <https://docs.cronologic.de/app_notes/tdc_errors>`__
+on the topic).
 
 .. figure:: _figures/cable_delay_tests.*
     :name: fig cable delay
     :alt: Histograms of cable delay tests.
 
-    Histograms of a cable delay test for all TimeTagger4 variants.
+    Histograms of a cable delay test for all TimeTagger4 variants. Each histogram
+    is shifted such that the highest bin is located at zero. The x-axis is in units
+    of LSB, with 1 LSB = 100 ps
+    (see :c:member:`packet_binsize <timetagger4_param_info.packet_binsize>`).
 
 Electrical Characteristics
 ==========================
