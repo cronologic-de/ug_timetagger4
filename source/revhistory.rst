@@ -104,8 +104,8 @@ Driver & Applications
 User Guide
 ==========
 
-2.0.3-dev – TBD
-    - Added :numref:`fig cable delay`
+2.0.3 – 2026-03-05
+    - Added :ref:`sec cable delay test`
     - Fixed typos
 
 2.0.2 – 2026-01-07

@@ -136,6 +136,9 @@ Oscillator Time Base
     | ΔF/F\ :sub:`10`| Aging 10 years                           |     |         | 8   | ppm   |
     +----------------+------------------------------------------+-----+---------+-----+-------+
 
+
+.. _sec cable delay test:
+
 Cable Delay Test
 ----------------
 
