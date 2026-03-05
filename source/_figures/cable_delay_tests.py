@@ -1,3 +1,5 @@
+from typing import Literal
+
 import numpy as np
 import matplotlib.pyplot as plt
 import mplutils as mplu
@@ -52,21 +54,39 @@ def shift_data(data: DataArray) -> DataArray:
     return data
 
 
-def main():
+def plot(ftype: Literal[".pdf", ".svg"]):
     data = load_data()
     data = normalize_to_100(data)
     data = shift_data(data)
-
-    layout_engine = mplu.FixedLayoutEngine(col_pads_ignore_labels=True, col_pads_pts=0)
 
     plt.style.use("cronostyle.mplstyle")
     plt.rcParams["axes.spines.left"] = True
     plt.rcParams["axes.spines.bottom"] = True
     plt.rcParams["axes.spines.top"] = True
     plt.rcParams["axes.spines.right"] = True
-    plt.rcParams["font.size"] = 6.0
 
-    fig, axs = plt.subplots(4, 4, layout=layout_engine)
+    if ftype == ".pdf":
+        pads = (0, 0, 0, 10, 0, 0, 0)
+        pads_ignore = (True, True, True, False, True, True, True)
+        axs_size = 0.8
+        plt.rcParams["font.size"] = 7.0
+    else:
+        pads = 0
+        axs_size = 1.0
+        pads_ignore = True
+        plt.rcParams["font.size"] = 9.0
+
+    layout_engine = mplu.FixedLayoutEngine(
+        col_pads_ignore_labels=pads_ignore,
+        col_pads_pts=pads,
+        max_figwidth=190 / mplu.constants.MM_PER_INCH,
+    )
+
+    if ftype == ".pdf":
+        fig, axs = plt.subplots(2, 8, layout=layout_engine)
+        axs = axs.reshape(4, 4)
+    else:
+        fig, axs = plt.subplots(4, 4, layout=layout_engine)
 
     for v, vname in enumerate(VARIANT_NAMES):
         ymax = data[v, :, 1].max()
@@ -84,7 +104,7 @@ def main():
             ax.set_title(cname)
 
             ax.plot(*data[v, c], drawstyle="steps-mid", lw=1.5)
-            mplu.set_axes_size(0.65, aspect=3.0, ax=axs[v, c])
+            mplu.set_axes_size(axs_size, aspect=3.0, ax=axs[v, c])
             ax.set_xlim(XLIMS)
             ax.set_ylim(-3, ymax * 1.05)
 
@@ -100,8 +120,12 @@ def main():
     for ax in axs[:, 2]:
         ax.xaxis.set_label_coords(0, -0.055)
 
-    fig.savefig(f"{FNAME}.pdf")
-    fig.savefig(f"{FNAME}.svg")
+    fig.savefig(f"{FNAME}{ftype}")
+
+
+def main():
+    plot(".pdf")
+    plot(".svg")
 
 
 if __name__ == "__main__":
