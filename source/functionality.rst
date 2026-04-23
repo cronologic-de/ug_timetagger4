@@ -137,6 +137,12 @@ Frequencies lower or equal to 600 Hz will contain rollover
 
 Disregarding these points, the choice of frequency is arbitrary.
 
+.. attention::
+
+    For continuous mode, :c:member:`timetagger4_channel.start` and
+    :c:member:`timetagger4_channel.stop` should be kept at their default values
+    (as provided by :c:func:`timetagger4_get_default_configuration`).
+
 
 .. _sec input delay:
 

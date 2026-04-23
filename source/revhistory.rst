@@ -104,6 +104,11 @@ Driver & Applications
 User Guide
 ==========
 
+2.0.5 – TBD
+    - Improve :c:member:`timetagger4_channel.start` and
+      :c:member:`stop <timetagger4_channel.stop>` documentation for
+      :ref:`sec continuous mode`.
+
 2.0.4 – 2026-03-31
     - Updated :ref:`sec led`
 
