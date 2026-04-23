@@ -105,7 +105,7 @@ User Guide
 ==========
 
 2.0.5 – TBD
-    - Improve :c:member:`timetagger4_channel.start` and
+    - Improved :c:member:`timetagger4_channel.start` and
       :c:member:`stop <timetagger4_channel.stop>` documentation for
       :ref:`sec continuous mode`.
 
