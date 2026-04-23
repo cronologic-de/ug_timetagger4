@@ -91,8 +91,13 @@ However, only if the
 :c:macro:`TIMETAGGER4_PACKET_FLAG_SHORTENED<crono_packet.flags.TIMETAGGER4_PACKET_FLAG_SHORTENED>`
 bit of :c:member:`crono_packet.flags` is set, packets were actually missed.
 
-timetagger4_read
-================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_read}
 
 .. c:function:: int timetagger4_read(\
     timetagger4_device *device,\
@@ -117,8 +122,11 @@ timetagger4_read
 
 
 
-timetagger4_acknowledge
-=======================
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_acknowledge}
 
 .. c:function:: int timetagger4_acknowledge(\
     timetagger4_device *device,\
@@ -154,8 +162,12 @@ timetagger4_acknowledge
 
 
 
-crono_next_packet
-=================
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{crono\_next\_packet}
+
 
 .. c:macro:: crono_next_packet(current_packet)
 
@@ -169,8 +181,11 @@ crono_next_packet
     :return: Pointer to the next packet.
 
 
-timetagger4_read_in
-===================
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_read\_in}
 
 .. c:struct:: timetagger4_read_in
 
@@ -185,8 +200,11 @@ timetagger4_read_in
         by the user.
 
 
-timetagger4_read_out
-====================
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_read\_out}
 
 .. c:struct:: timetagger4_read_out
 

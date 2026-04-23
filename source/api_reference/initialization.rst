@@ -42,8 +42,10 @@ or in Section :ref:`sec code example`.
 
 
 
-timetagger4_get_default_init_parameters
-=======================================
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_get\_default\_init\_parameters}
 
 .. c:function:: int timetagger4_get_default_init_parameters(\
     timetagger4_init_parameters *init)
@@ -60,8 +62,13 @@ timetagger4_get_default_init_parameters
         :c:macro:`TIMETAGGER4_OK` or
         :c:macro:`TIMETAGGER4_CRONO_INVALID_ARGUMENTS`.
 
-timetagger4_init
-================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_init}
 
 .. c:function:: timetagger4_device timetagger4_init(\
     timetagger4_init_parameters *params,\
@@ -93,8 +100,11 @@ timetagger4_init
         :c:member:`params.card_index <timetagger4_init_parameters.card_index>`.
 
 
-timetagger4_close
-=================
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_close}
 
 .. c:function:: int timetagger4_close(timetagger4_device *device)
 
@@ -109,13 +119,21 @@ timetagger4_close
         :c:macro:`TIMETAGGER4_CRONO_INTERNAL_ERROR`.
 
 
-timetagger4_init_parameters
-===========================
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_init\_parameters}
 
 .. include:: structs/timetagger4_init_parameters.rst
 
-timetagger4_device
-==================
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_device}
 
 .. c:struct:: timetagger4_device
 

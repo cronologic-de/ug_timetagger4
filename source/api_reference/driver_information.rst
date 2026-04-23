@@ -6,8 +6,11 @@
 Driver Information
 ==================
 
-timetagger4_get_driver_revision
-===============================
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_get\_driver\_revision}
 
 .. c:function:: int timetagger4_get_driver_revision()
 
@@ -19,8 +22,12 @@ timetagger4_get_driver_revision
              :c:member:`timetagger4_static_info.driver_revision`.
 
 
-timetagger4_get_driver_revision_str
-===================================
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_get\_driver\_revision\_str}
 
 .. c:function:: const char* timetagger4_get_driver_revision_str()
 
@@ -31,8 +38,12 @@ timetagger4_get_driver_revision_str
     :return: The driver version including the SVN build revision as a string.
 
 
-timetagger4_count_devices
-=========================
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_count\_devices}
 
 .. c:function:: int timetagger4_count_devices(int *error_code, char **error_message)
 

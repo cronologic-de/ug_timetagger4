@@ -8,59 +8,61 @@
 Output Data Format
 ==================
 
-Data read from :c:func:`timetagger4_read` is provided as *packets*. The data
-layout of a packet is :c:struct:`crono_packet`.
-
-The following code snippets shows the principal of how to unpack a
-:c:struct:`crono_packet`.
-
-A complete coding example can be found on
-`github.com/cronologic-de/xtdc_babel <https://github.com/cronologic-de/xtdc_babel>`__
-or in Section :ref:`sec code example`.
-
-.. code-block:: C
-
-    uint32_t binsize_ps = param_info->packet_binsize;
-
-    int64_t absolute_time_bins = packet->timestamp;
-    double absolute_time_ps = absolute_time_bins * binsize_ps;
-
-    // 2 TDC hits are in each packet->data word.
-    int hit_count = 2 * packet->length;
-    // If an odd number of hits were recorded, the high 32 bits of the last data word
-    // do not contain valid data
-    if ((packet->flags & TIMETAGGER4_PACKET_FLAG_ODD_HITS) != 0)
-        hit_count -= 1;
-
-    uint32_t *packet_data = (uint32_t*)(packet->data);
-
-    // keep track of possible timestamp rollovers
-    uint32_t rollover_counter = 0;
-    uint64_t rollover_period_bins = static_info->rollover_period;
-
-    for(int i=0; i<hit_count; ++i)
-    {
-        uint32_t channel = packet_data[i]      & 0xF;
-        uint32_t flags   = packet_data[i] >> 4 & 0xF;
-
-        if ((flags & TIMETAGGER4_HIT_FLAG_TIME_OVERFLOW) != 0)
-        {
-            rollover_counter += 1;
-        }
-        else
-        {
-            uint32_t timestamp_bins = packet_data[i] >> 8 & 0xFFFFFF;
-            double timestamp_ps = binsize * (
-                timestamp_bins + rollover_counter * rollover_period_bins);
-            double absolute_timestamp = absolute_time_ps + timestamp_ps;
-        }
-    }
 
 
-crono_packet
-============
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{crono\_packet}
 
 .. c:struct:: crono_packet
+
+    Data read from :c:func:`timetagger4_read` is provided as *packets*. The data
+    layout of a packet is *crono_packet*.
+
+    The following code snippets shows the principal of how to unpack a *crono_packet*.
+
+    A complete coding example can be found on
+    `github.com/cronologic-de/xtdc_babel <https://github.com/cronologic-de/xtdc_babel>`__
+    or in Section :ref:`sec code example`.
+
+    .. code-block:: C
+
+        uint32_t binsize_ps = param_info->packet_binsize;
+
+        int64_t absolute_time_bins = packet->timestamp;
+        double absolute_time_ps = absolute_time_bins * binsize_ps;
+
+        // 2 TDC hits are in each packet->data word.
+        int hit_count = 2 * packet->length;
+        // If an odd number of hits were recorded, the high 32 bits of the last
+        // data word do not contain valid data
+        if ((packet->flags & TIMETAGGER4_PACKET_FLAG_ODD_HITS) != 0)
+            hit_count -= 1;
+
+        uint32_t *packet_data = (uint32_t*)(packet->data);
+
+        // keep track of possible timestamp rollovers
+        uint32_t rollover_counter = 0;
+        uint64_t rollover_period_bins = static_info->rollover_period;
+
+        for(int i=0; i<hit_count; ++i)
+        {
+            uint32_t channel = packet_data[i]      & 0xF;
+            uint32_t flags   = packet_data[i] >> 4 & 0xF;
+
+            if ((flags & TIMETAGGER4_HIT_FLAG_TIME_OVERFLOW) != 0)
+            {
+                rollover_counter += 1;
+            }
+            else
+            {
+                uint32_t timestamp_bins = packet_data[i] >> 8 & 0xFFFFFF;
+                double timestamp_ps = binsize * (
+                    timestamp_bins + rollover_counter * rollover_period_bins);
+                double absolute_timestamp = absolute_time_ps + timestamp_ps;
+            }
+        }
 
     .. c:member:: uint8_t channel
 
