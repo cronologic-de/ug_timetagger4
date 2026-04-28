@@ -132,6 +132,7 @@ or in Section :ref:`sec code example`.
 
 .. raw:: latex
 
+    \clearpage
     \phantomsection
     \addcontentsline{toc}{subsection}{timetagger4\_device}
 
