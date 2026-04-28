@@ -24,7 +24,7 @@ A typical workflow in an application would be:
 - Start data acquisition (see :ref:`sec runtime control`).
 - Read a batch of packets.
 - Iterate through the batch and process the packets (see :ref:`sec data format` for
-   the data layout). For this purpose, :c:macro:`crono_next_packet` is provided.
+  the data layout). For this purpose, :c:macro:`crono_next_packet` is provided.
 - Acknowledge the batch as processed with :c:func:`timetagger4_acknowledge`.
 
 Instead of manually acknowledging each batch, each read batch of data can be
