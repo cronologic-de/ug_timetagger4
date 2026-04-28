@@ -112,7 +112,7 @@
 
         .. c:macro:: TIMETAGGER4_DC_OFFSET_P_LVTTL_25
 
-            DC offset is set to 1.13.
+            DC offset is set to 1.13 V.
 
         .. c:macro:: TIMETAGGER4_DC_OFFSET_P_SSTL_3
 
