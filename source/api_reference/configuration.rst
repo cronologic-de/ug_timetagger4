@@ -2,6 +2,8 @@
 
     \clearpage
 
+:tocdepth: 3
+
 .. _sec configuration:
 
 =============
