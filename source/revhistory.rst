@@ -108,6 +108,8 @@ User Guide
     - Improved :c:member:`timetagger4_channel.start` and
       :c:member:`stop <timetagger4_channel.stop>` documentation for
       :ref:`sec continuous mode`.
+    - Improve :c:func:`timetagger4_start_capture` documentation.
+    - Updated User Guide layout
 
 2.0.4 – 2026-03-31
     - Updated :ref:`sec led`

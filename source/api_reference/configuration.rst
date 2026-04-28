@@ -2,6 +2,8 @@
 
     \clearpage
 
+:tocdepth: 3
+
 .. _sec configuration:
 
 =============
@@ -37,8 +39,10 @@ or in Section :ref:`sec code example`.
     if (status != TIMETAGGER4_OK) { /* handle error */ }
 
 
-timetagger4_configure
-=====================
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_configure}
 
 .. c:function:: int timetagger4_configure(\
     timetagger4_device *device,\
@@ -55,8 +59,11 @@ timetagger4_configure
         :c:macro:`TIMETAGGER4_INVALID_CONFIG_PARAMETERS`.
 
 
-timetagger4_get_default_configuration
-=====================================
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_get\_default\_configuration}
 
 .. c:function:: int timetagger4_get_default_configuration(\
     timetagger4_device *device,\
@@ -72,8 +79,11 @@ timetagger4_get_default_configuration
         :c:macro:`TIMETAGGER4_CRONO_INVALID_ARGUMENTS`.
 
 
-timetagger4_get_current_configuration
-=====================================
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_get\_current\_configuration}
 
 .. c:function:: int timetagger4_get_current_configuration(\
     timetagger4_device *device,\
@@ -88,31 +98,46 @@ timetagger4_get_current_configuration
     :return: Status code: :c:macro:`TIMETAGGER4_OK`, or
         :c:macro:`TIMETAGGER4_INVALID_DEVICE`.
 
-timetagger4_configuration
-=========================
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_configuration}
 
 .. include:: structs/timetagger4_configuration.rst
 
 
-timetagger4_trigger
-===================
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_trigger}
 
 .. include:: structs/timetagger4_trigger.rst
 
 
-timetagger4_tiger_block
-=======================
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_tiger\_block}
 
 .. include:: structs/timetagger4_tiger_block.rst
 
 
-timetagger4_channel
-===================
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_channel}
 
 .. include:: structs/timetagger4_channel.rst
 
 
-timetagger4_delay_config
-========================
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_delay\_config}
 
 .. include:: structs/timetagger4_delay_config.rst

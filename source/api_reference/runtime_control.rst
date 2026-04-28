@@ -14,12 +14,23 @@ the behavior of it.
 These functions return quickly with very little overhead. However, they are not
 guaranteed to be thread safe. 
 
-timetagger4_start_capture
-=========================
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_start\_capture}
 
 .. c:function:: int timetagger4_start_capture(timetagger4_device *device)
 
     Start data acquisition.
+
+    .. note::
+
+        :c:func:`!timetagger4_start_capture` will reset the memory buffer.
+
+        If you wish to stop recording data and resume later without clearing the
+        buffer, use :c:func:`timetagger4_pause_capture` and
+        :c:func:`timetagger4_continue_capture`.
 
     :param device: Pointer to a TimeTagger4 device.
     :returns: Status code:
@@ -30,8 +41,11 @@ timetagger4_start_capture
         :c:macro:`TIMETAGGER4_WRONG_STATE`.
 
 
-timetagger4_pause_capture
-=========================
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_pause\_capture}
 
 .. c:function:: int timetagger4_pause_capture(timetagger4_device *device)
 
@@ -49,8 +63,11 @@ timetagger4_pause_capture
         :c:macro:`TIMETAGGER4_WRONG_STATE`.
 
 
-timetagger4_continue_capture
-============================
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_continue\_capture}
 
 .. c:function:: int timetagger4_continue_capture(timetagger4_device *device)
 
@@ -68,8 +85,11 @@ timetagger4_continue_capture
         :c:macro:`TIMETAGGER4_WRONG_STATE`.
 
 
-timetagger4_stop_capture
-=========================
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_stop\_capture}
 
 .. c:function:: int timetagger4_stop_capture(timetagger4_device *device)
 
@@ -81,8 +101,11 @@ timetagger4_stop_capture
         :c:macro:`TIMETAGGER4_INVALID_DEVICE`.
 
 
-timetagger4_start_tiger
-=======================
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_start\_tiger}
 
 .. c:function:: int timetagger4_start_tiger(timetagger4_device *device)
 
@@ -97,8 +120,12 @@ timetagger4_start_tiger
         :c:macro:`TIMETAGGER4_WRONG_STATE`.
 
 
-timetagger4_stop_tiger
-=======================
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_stop\_tiger}
 
 .. c:function:: int timetagger4_stop_tiger(timetagger4_device *device)
 

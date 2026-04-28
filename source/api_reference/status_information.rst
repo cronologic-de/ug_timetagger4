@@ -2,12 +2,17 @@
 
     \clearpage
 
+:tocdepth: 3
+
 ==================
 Status Information
 ==================
 
-timetagger4_get_device_type
-===========================
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_get\_device\_type}
 
 .. c:function:: int timetagger4_get_device_type(timetagger4_device *device)
 
@@ -16,8 +21,12 @@ timetagger4_get_device_type
     :param device: Pointer to a TimeTagger4 device.
     :return: :c:macro:`CRONO_DEVICE_TIMETAGGER4`
 
-timetagger4_get_last_error_message
-==================================
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_get\_last\_error\_message}
 
 .. c:function:: const char* timetagger4_get_last_error_message(\
     timetagger4_device *device)
@@ -27,8 +36,12 @@ timetagger4_get_last_error_message
     :param device: Pointer to a TimeTagger4 device.
     :return: The error message.
 
-timetagger4_get_fast_info
-=========================
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_get\_fast\_info}
 
 .. c:function:: int timetagger4_get_fast_info(\
     timetagger4_device *device,\
@@ -46,8 +59,13 @@ timetagger4_get_fast_info
         :c:macro:`TIMETAGGER4_CRONO_INVALID_ARGUMENTS`, or
         ``-1``.
 
-timetagger4_get_param_info
-==========================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_get\_param\_info}
 
 .. c:function:: int timetagger4_get_param_info(\
     timetagger4_device *device,\
@@ -66,8 +84,12 @@ timetagger4_get_param_info
         :c:macro:`TIMETAGGER4_WRONG_STATE`,
 
 
-timetagger4_get_static_info
-===========================
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_get\_static\_info}
 
 .. c:function:: int timetagger4_get_static_info(\
     timetagger4_device *device,\
@@ -84,9 +106,14 @@ timetagger4_get_static_info
         :c:macro:`TIMETAGGER4_CRONO_INVALID_ARGUMENTS`.
 
 
-timetagger4_get_pcie_info
-=========================
+
+
     
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_get\_pcie\_info}
+
 .. c:function:: int timetagger4_get_pcie_info(\
     timetagger4_device *device,\
     crono_pcie_info *pcie_info)
@@ -101,8 +128,13 @@ timetagger4_get_pcie_info
         :c:macro:`TIMETAGGER4_INVALID_DEVICE`, or
         :c:macro:`TIMETAGGER4_HARDWARE_FAILURE`.
 
-timetagger4_clear_pcie_errors
-=============================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_clear\_pcie\_errors}
 
 .. c:function:: int timetagger4_clear_pcie_errors(\
     timetagger4_device *device,\
@@ -128,22 +160,42 @@ timetagger4_clear_pcie_errors
         :c:macro:`TIMETAGGER4_OK`, or
         :c:macro:`TIMETAGGER4_INVALID_DEVICE`.
 
-timetagger4_fast_info
-=====================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_fast\_info}
 
 .. include:: structs/timetagger4_fast_info.rst
 
-timetagger4_param_info
-======================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_param\_info}
 
 .. include:: structs/timetagger4_param_info.rst
     
-timetagger4_static_info
-=======================
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{timetagger4\_static\_info}
 
 .. include:: structs/timetagger4_static_info.rst
 
-crono_pcie_info
-===============
+
+
+
+.. raw:: latex
+
+    \phantomsection
+    \addcontentsline{toc}{subsection}{crono\_pcie\_info}
 
 .. include:: structs/crono_pcie_info.rst

@@ -32,11 +32,15 @@
 
             :c:member:`auto_trigger_period` must be set appropriately.
 
-            The time corresponding to :c:member:`channel[i].stop <channel>` must be
-            larger than the time corresponding to :c:member:`auto_trigger_period`,
-            otherwise not all hits on ``channels[i]`` will be recorded. You can achieve
-            this easily by setting :c:member:`stop <timetagger4_channel.stop>` to the
-            maximum possible value (``0xffffffff``).
+            .. attention::
+
+                The time corresponding to :c:member:`channel[i].stop <channel>` must be
+                larger than the time corresponding to :c:member:`auto_trigger_period`,
+                otherwise not all hits on ``channels[i]`` will be recorded.
+
+                You can achieve this easily by keeping
+                :c:member:`stop <timetagger4_channel.stop>` at its the
+                default value ``0x7fffffff`` (the maximum possible value).
 
     .. c:member:: crono_bool_t start_rising
 
@@ -108,7 +112,7 @@
 
         .. c:macro:: TIMETAGGER4_DC_OFFSET_P_LVTTL_25
 
-            DC offset is set to 1.13.
+            DC offset is set to 1.13 V.
 
         .. c:macro:: TIMETAGGER4_DC_OFFSET_P_SSTL_3
 
