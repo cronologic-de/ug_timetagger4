@@ -24,6 +24,14 @@ guaranteed to be thread safe.
 
     Start data acquisition.
 
+    .. note::
+
+        :c:func:`!timetagger4_start_capture` will reset the memory buffer.
+
+        If you wish to stop recording data and resume later without clearing the
+        buffer, use :c:func:`timetagger4_pause_capture` and
+        :c:func:`timetagger4_continue_capture`.
+
     :param device: Pointer to a TimeTagger4 device.
     :returns: Status code:
         :c:macro:`TIMETAGGER4_OK`,
