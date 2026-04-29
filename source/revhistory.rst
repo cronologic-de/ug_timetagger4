@@ -104,9 +104,9 @@ Driver & Applications
 User Guide
 ==========
 
-2.0.5 – TBD
+2.0.5 – 2026-04-29
     - Improved :c:member:`timetagger4_channel.start` and
-      :c:member:`stop <timetagger4_channel.stop>` documentation for
+      :c:member:`~timetagger4_channel.stop` documentation for
       :ref:`sec continuous mode`
     - Improved :c:func:`timetagger4_start_capture` documentation
     - Updated User Guide layout
