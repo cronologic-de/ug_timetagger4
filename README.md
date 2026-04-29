@@ -15,32 +15,26 @@ Python is necessary for creating the HTML output.
 
 Python and LuaLaTeX are necessary for creating the LaTeX/PDF output.
 
-Optionally, create and activate a virtual environment
+Dependencies are managed using [uv](https://docs.astral.sh/uv).
+
+To install the necessary dependencies, run
 
 ```shell
-python -m venv .venv
+uv sync --no-dev --frozen
+```
+
+Omit the `--no-dev` flag if you want to also install the dependencies required for
+creating some figures (e.g., [grouping.py](source/_figures/grouping.py)).
+
+The `--frozen` flag guarantees that the output is identical to the one published at
+[docs.cronologic.de/timetagger4](https://docs.cronologic.de/timetagger4).
+
+Make sure to activate the virtual environment created by uv. Under Windows, you can do
+this by running
+
+```shell
 . .\.venv\Scripts\activate
 ```
-
-Depending on your operating system, you may need to run a different activation script.
-
-The requirements are listed in `requirements.txt`, `requirements-frozen.txt`, and
-`requirements-dev.txt`.
-
-If you want to guarantee the output to be the same as hosted at
-[docs.cronologic.de/timetagger4](https://docs.cronologic.de/timetagger4), install the
-packages listed in `requirements-frozen.txt`, that is, run
-
-```shell
-pip install -r requirements-frozen.txt
-```
-
-If you want to install the most up-to-date versions of the prerequisites, use
-`requirements.txt`.
-
-If you want to install the most up-to-date versions and also install plotting libraries
-(e.g., to run Python scripts in [\_figures/](source/_figures/)), use
-`requirements-dev.txt`.
 
 ### Fonts for LaTeX
 
