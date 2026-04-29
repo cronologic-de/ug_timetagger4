@@ -11,6 +11,7 @@ TimeTagger4 User Guide
     \phantomsection
     \addcontentsline{toc}{chapter}{Introduction}
     \chapter*{Introduction}
+    \markboth{Introduction}{}
 
 With the original TimeTaggers, cronologic has coined a name for an entire generic brand
 of time-to-digital converters. Our TimeTagger4 boards are *common-start*, low-resolution,
