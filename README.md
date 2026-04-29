@@ -17,25 +17,6 @@ Python and LuaLaTeX are necessary for creating the LaTeX/PDF output.
 
 Dependencies are managed using [uv](https://docs.astral.sh/uv).
 
-To install the necessary dependencies, run
-
-```shell
-uv sync --no-dev --frozen
-```
-
-Omit the `--no-dev` flag if you want to also install the dependencies required for
-creating some figures (e.g., [grouping.py](source/_figures/grouping.py)).
-
-The `--frozen` flag guarantees that the output is identical to the one published at
-[docs.cronologic.de/timetagger4](https://docs.cronologic.de/timetagger4).
-
-Make sure to activate the virtual environment created by uv. Under Windows, you can do
-this by running
-
-```shell
-. .\.venv\Scripts\activate
-```
-
 ### Fonts for LaTeX
 
 The `fontspec` package is used for the LaTeX output. It may complain that fonts are
@@ -66,6 +47,8 @@ make latexpdf
 
 to compile the project as HTML or PDF. The HTML (PDF) output is in `build/html/`
 (`build/latex/`).
+
+Alternatively, if you do not have make, use the [make.bat](make.bat) script instead.
 
 ## License
 
