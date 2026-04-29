@@ -95,6 +95,7 @@ latex_elements = {
         \usepackage[
             sphinx,
             noframe=false,
+            webpage=https://docs.cronologic.de/timetagger4,
         ]
         {cronologicug}
         \definecolor{ctypered}{RGB}{142,33,0} % C-type auto highlighting color
