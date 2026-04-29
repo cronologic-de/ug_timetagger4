@@ -1,4 +1,4 @@
-import atompy as ap
+import mplutils as mplu
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.axes import Axes
@@ -39,10 +39,7 @@ def add_square_pulse(
         ]
         y_pulse = np.array((y[0], y[0] - height, y[0] - height, y[0]))
 
-        # Insert the pulse into the original line
-        insert_index = np.searchsorted(
-            x_new, x_pulse[0]
-        )  # Find where to insert the pulse
+        insert_index = np.searchsorted(x_new, x_pulse[0])
 
         x_new = list(x_new)
         x_new[insert_index:insert_index] = x_pulse  # Insert x values
@@ -88,8 +85,6 @@ def plot_stopB(ax: Axes):
     x, y = add_square_pulse(x, y, (-11, -6, 1, 8, 10))
     ax.plot(x, y, lw=1.3, color=blue)
 
-    # for xpos in (-11, -6, 8, 10):
-    #     add_rectangle(ax, xpos, grey, height=-0.3, ypos=y0)
     for xpos in (1,):
         add_rectangle(ax, xpos, orange, height=-0.3, ypos=y0)
 
@@ -156,8 +151,6 @@ def plot_stopD(ax: Axes):
 
     for xpos in (-0, 5):
         add_rectangle(ax, xpos, orange, height=-0.3, ypos=1)
-    # for xpos in (9,):
-    #     add_rectangle(ax, xpos, grey, height=-0.3, ypos=1)
 
     ax.text(-12.2, 1, "Stop D", ha="right", va="center", color=grey)
 
@@ -170,13 +163,12 @@ def plot_stopD(ax: Axes):
 
 
 def main():
-    plt.rcParams["figure.figsize"] = 130 / ap.MM_PER_INCH, 5
     plt.rcParams["font.family"] = "arial"
 
-    ax = plt.subplot(111)
-    ax.set_axis_off()
+    _, ax = plt.subplots(layout=mplu.FixedLayoutEngine(margin_pads_pts=0.4))
 
-    ax.set_box_aspect(1.0 / 1.5)
+    mplu.set_axes_size(130.0, 2 * 130.0 / 3, unit="mm")
+    ax.set_axis_off()
 
     ax.set_xlim(-12, 12)
     ax.set_ylim(0.6, 5.7)
@@ -187,9 +179,7 @@ def main():
     plot_stopC(ax)
     plot_stopD(ax)
 
-    ap.make_me_nice(margin_pad_pts=0)
-
-    ap.savefig(ftype=("pdf", "svg"), transparent=True)
+    mplu.savefig(ftype=("pdf", "svg"), transparent=True)
 
 
 if __name__ == "__main__":
