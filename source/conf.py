@@ -21,7 +21,7 @@ def get_version():
 version = get_version()
 
 project = "TimeTagger4 User Guide"
-copyright = "2025, cronologic GmbH & Co. KG"
+copyright = "2026, cronologic GmbH & Co. KG"
 author = "cronologic GmbH & Co. KG"
 release = version
 
