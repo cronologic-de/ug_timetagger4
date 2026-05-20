@@ -69,7 +69,7 @@ Status Information
 
 .. c:function:: int timetagger4_get_param_info(\
     timetagger4_device *device,\
-    timetagger4_fast_info *info)
+    timetagger4_param_info *info)
 
     Obtain information about configuration changes.
 
