@@ -75,7 +75,8 @@ Status Information
 
     Gets information that changes indirectly due to configuration changes.
 
-    :param device: Pointer to a TimeTagger4 device.
+    :param device: Pointer to a TimeTagger4 device. The device has to be
+        :doc:`configured <configuration>`.
     :param info: Pointer to a :c:struct:`timetagger4_param_info` struct that
         will be filled.
     :return: Status codes:

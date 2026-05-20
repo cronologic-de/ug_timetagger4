@@ -104,6 +104,9 @@ Driver & Applications
 User Guide
 ==========
 
+2.0.6 – TBD
+    - Updated documentation for :c:func:`timetagger4_get_param_info`
+
 2.0.5 – 2026-04-29
     - Improved :c:member:`timetagger4_channel.start` and
       :c:member:`~timetagger4_channel.stop` documentation for
