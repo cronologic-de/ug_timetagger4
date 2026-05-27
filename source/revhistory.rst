@@ -112,7 +112,7 @@ Driver & Applications
 User Guide
 ==========
 
-2.0.6 – TBD
+2.0.6 – 2026-05-27
     - Updated documentation for :c:func:`timetagger4_get_param_info`
     - Updated driver revision list
 
