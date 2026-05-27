@@ -51,6 +51,14 @@ Gen 2
 
 Driver & Applications
 =====================
+1.13.0 – 2026-05-27
+    - Updated kernel driver with IOMMU support, enabling handling of logical
+      addresses for improved compatibility with modern system arcitectures and
+      memory management environments
+
+1.12.4 – 2025-12-15
+    - Fixed a kernel driver bug that may cause a bluescreen
+
 1.12.1 – 2025-07-17
     - Added support for kernel mode driver 1.5.2
     - Improved error handling
@@ -106,6 +114,7 @@ User Guide
 
 2.0.6 – TBD
     - Updated documentation for :c:func:`timetagger4_get_param_info`
+    - Updated driver revision list
 
 2.0.5 – 2026-04-29
     - Improved :c:member:`timetagger4_channel.start` and
