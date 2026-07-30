@@ -5,8 +5,8 @@
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
-import tomllib
 import pathlib
+import tomllib
 
 
 def get_version():
@@ -41,6 +41,8 @@ extensions = []
 
 templates_path = ["_templates"]
 exclude_patterns = ["global.rst", "api_reference/structs/*.rst"]
+
+primary_domain = "c"
 
 numfig = True
 numfig_format = {"figure": "Figure %s", "table": "Table %s"}
@@ -96,6 +98,7 @@ html_static_path = ["_static"]
 html_css_files = ["custom.css"]
 
 # Latex output
+latex_table_style = ["booktabs"]
 latex_engine = "lualatex"
 latex_xindy_use = False
 latex_elements = {
