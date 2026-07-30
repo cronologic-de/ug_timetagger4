@@ -1,5 +1,7 @@
 .. c:struct:: timetagger4_channel
 
+    Used in :member:`timetagger4_configuration.channel`.
+
     .. c:member:: crono_bool_t enabled
 
         Enable the TDC channel.

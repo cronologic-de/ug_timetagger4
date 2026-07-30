@@ -2,6 +2,8 @@
 
     Only available for TimeTagger4 Gen 2.
 
+    Used in :member:`timetagger4_configuration.delay_config`.
+
     .. c:member:: uint32_t delay
 
         Delay the corresponding input channel.
