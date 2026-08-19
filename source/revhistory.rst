@@ -111,7 +111,7 @@ Driver & Applications
 
 User Guide
 ==========
-2.0.7 – TBD
+2.0.7 – 2026-08-19
     - Linked related structs
 
 2.0.6 – 2026-05-27
