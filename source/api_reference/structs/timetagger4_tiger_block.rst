@@ -4,7 +4,7 @@
     This struct configures the Timing Generators
     [see also :ref:`sec tiger`].
 
-    Used in :member:`timetagger4_configuration.tiger_block`.
+    Used for :member:`timetagger4_configuration.tiger_block`.
 
     .. c:member:: crono_bool_t enable
 
