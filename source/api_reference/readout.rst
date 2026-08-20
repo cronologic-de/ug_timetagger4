@@ -40,9 +40,9 @@ or in Section :ref:`sec code example`.
 
 .. code-block:: C
 
-    timetagger_read_in read_config;
+    timetagger4_read_in read_config;
     read_config.acknowledge_last_read = true;
-    timetagger_read_out read_data;
+    timetagger4_read_out read_data;
 
     status = timetagger4_read(device, &read_config, &read_data)
     if (status != TIMETAGGER4_OK) {
