@@ -108,6 +108,8 @@ latex_elements = {
     "preamble": r"""
         \usepackage[
             sphinx,
+            pdfkeywords={TDC, Time-to-Digital Converter, TimeTagger4,
+                         User Guide},
             noframe=false,
             webpage=https://docs.cronologic.de/timetagger4,
         ]
